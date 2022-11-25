@@ -1,1 +1,6 @@
-<h1>schedule test</h1>
+<form action="/calendar/" method="post">
+    {% csrf_token %}
+    {{form }}
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
