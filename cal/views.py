@@ -1,3 +1,6 @@
+from datetime import datetime
+import calendar
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
@@ -28,9 +31,9 @@ class ScheduleView(View):
             return HttpResponseRedirect('/calendar/')
         return render(request, self.template_name, {'form': form})
 
-    # def schedule_job(request):
+    # def schedule_job(self, request):
     #     if request.method == 'POST':
-    #         # form = ScheduleForm(request.POST)
+    #         form = ScheduleForm(request.POST)
     #         if form.is_valid():
     #
     #             return HttpResponseRedirect('/calendar/')
