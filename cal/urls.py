@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import ScheduleView, CalendarView, LoginView
+from . import views
+from .views import CalendarCreateView
 
 urlpatterns = [
-    path('schedule/', ScheduleView.as_view(), name='schedule'),
-    path('calendar/', CalendarView.as_view(), name='calendar'),
-    path('', LoginView.as_view(), name='login'),
+    path('schedule/', views.schedule, name='schedule'),
+    path('', CalendarCreateView.as_view(), name='calendar'),
 ]

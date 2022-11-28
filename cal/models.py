@@ -7,6 +7,7 @@ ASSIGNED_TO = [
     ('OT', 'Other'),
 ]
 
+
 class Form(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
@@ -16,4 +17,4 @@ class Form(models.Model):
     zip = models.CharField(max_length=5)
     job_details = models.CharField(max_length=500)
     assignee = models.CharField(max_length=10, choices=ASSIGNED_TO, default='other')
-    sched_on = models.DateTimeField('scheduled on')
+    sched_on = models.DateTimeField()
