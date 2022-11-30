@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 ASSIGNED_TO = [
     ('BR', 'Brad'),
@@ -17,4 +18,8 @@ class Form(models.Model):
     zip = models.CharField(max_length=5)
     job_details = models.CharField(max_length=500)
     assignee = models.CharField(max_length=10, choices=ASSIGNED_TO, default='other')
-    sched_on = models.DateTimeField()
+    sched_on = models.DateField()
+    class Meta:
+        db_table = 'cal_form'
+
+

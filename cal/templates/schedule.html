@@ -1,5 +1,5 @@
 <h1>Schedule a Job</h1>
-<form action="/calendar/" method="post">
+<form action="{% url 'calendar' %}" method="post">
     {% csrf_token %}
     {{form.as_p }}
     <input type="submit" value="Submit">
