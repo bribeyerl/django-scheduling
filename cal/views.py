@@ -12,7 +12,6 @@ from .models import Form
 
 class JobList(generic.ListView):
     model = Form
-    # add queryset
     template_name = 'index.html'
 
 
