@@ -1,11 +1,10 @@
 from django.db import models
-from django.urls import reverse
 
 ASSIGNED_TO = [
-    ('BR', 'Brad'),
-    ('MA', 'Matt'),
-    ('NI', 'Nick'),
-    ('OT', 'Other'),
+    ('BRAD', 'Brad'),
+    ('MATT', 'Matt'),
+    ('NICK', 'Nick'),
+    ('OTHER', 'Other'),
 ]
 
 
