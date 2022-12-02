@@ -1,14 +1,20 @@
-<h1>Job List</h1>
-<ul>
-    {% for object in object_list %}
-    <li>Customer Name: {{ object.first_name }} {{object.last_name }}</li>
-    <li>City: {{ object.city }}</li>
-    <li>Scheduled: {{ object.sched_on }}</li>
-    <li>Assignee: {{ object.assignee }}</li>
+{% extends 'base.html' %}
 
-    <hr/>
+{% block title %}Job List{% endblock title %}
 
-    {% empty %}
-    <li>No jobs have been added</li>
-    {% endfor %}
-</ul>
+{% block content %}
+    <h1>Job List</h1>
+    <ul>
+        {% for object in object_list %}
+        <li>Customer Name: {{ object.first_name }} {{object.last_name }}</li>
+        <li>City: {{ object.city }}</li>
+        <li>Scheduled: {{ object.sched_on }}</li>
+        <li>Assignee: {{ object.assignee }}</li>
+
+        <hr/>
+
+        {% empty %}
+        <li>No jobs have been added</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

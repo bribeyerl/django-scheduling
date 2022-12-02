@@ -1,0 +1,39 @@
+/* BASE STYLES */
+html {
+    font-family: 'Roboto', 'Source Sans Pro', sans-serif;
+    font-size: 10px;
+}
+body {
+    margin: 0;
+}
+/* LAYOUT */
+div, ul {
+    display: flex;
+    align-items: center;
+}
+ul {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+div {
+    padding: 1% 0 0 1%;
+}
+/* ADDITIONAL STYLING */
+li {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 0 0 1% 0;
+}
+.beyerl {
+    font-size: 3rem;
+}
+header {
+    background-color: rgb(226, 226, 226);
+}
+a:link, a:visited {
+    color: rgb(48, 88, 118);
+    text-decoration: none;
+}
+/* RESPONSIVE CSS */
+
+
